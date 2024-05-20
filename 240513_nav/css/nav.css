@@ -57,6 +57,7 @@ nav {
     display: flex;
     align-items: center;
     column-gap: 40px;
+    transition: 0.4s ease-in-out;
 }
 
 .nav-logo {
@@ -77,12 +78,12 @@ nav {
     }
     .nav-list {
         position: absolute;
-        top: var(--nav-height);
+        top: calc(var(--nav-height) - 144px);    /* calc(수치 연산자 수치); */
         right: 0;
         left: 0;
         flex-direction: column; /* flex 방향 세로로 */
         background-color: hsla(200, 100%, 25%, 0.6);
-
+        z-index: -1;        /* nav 뒤로 보내자 */
     }
     .nav-item {
         padding: 0.5rem 1rem;   /* 위/아래 왼/오른 */
@@ -95,5 +96,9 @@ nav {
     }
     .nav-toggle {
         display: block;     /* 햄버거 메뉴 보이자 */
+    }
+    
+    .show-menu {
+        top: var(--nav-height);
     }
 }
