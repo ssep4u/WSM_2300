@@ -18,8 +18,8 @@
 }
 #search-bar {
     font-size: var(--h2-font-size);
-    border: 2px solid green;       /* 입력창 외곽선 삭제 */
     background: none;
+    border: none;
     outline: none;      /* focus 되었을 때 외곽선 삭제 */
     padding: 10px;
     flex-grow: 1;       /* 정해진 너비에 여유 공간이 있을 때 확장하자 (입력창 커짐) */
