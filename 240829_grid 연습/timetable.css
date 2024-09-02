@@ -1,0 +1,29 @@
+.container {
+    width: 800px;
+    height: 600px;
+    display: grid;  /* 열: 6, 행: 11*/
+    grid-template-columns: 50px repeat(5, 1fr);
+}
+.item {
+    border: 1px solid gray;
+    display: grid;
+    place-items: center;
+    color: olivedrab;
+    font-weight: bold;
+}
+.first-row {
+    background-color: orange;
+}
+.time {
+    background-color: moccasin;
+}
+/* .item:nth-child(6n+7) {
+    background-color: moccasin;
+} */
+.mon-wsm {
+    grid-row: span 2;
+    /* grid-row-start: 6;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 3; */
+}
