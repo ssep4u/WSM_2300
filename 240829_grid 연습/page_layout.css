@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container * {
+    border: 1px solid gray;
+}
+html {
+    height: 100%;
+}
+.container {
+    height: 100%;       /* 부모 height의 100% */
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    grid-template-rows: 44px 1fr 100px;
+    grid-template-areas: 
+    "header     header  header"
+    "side-left  main    side-right"
+    "footer     footer  footer";
+}
+figure img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header {
+    grid-area: header;
+}
+nav {
+    height: 100%;       /* 44px */
+}
+.side1 {
+    grid-area: side-left;
+}
+main {
+    grid-area: main;
+}
+.side2 {
+    grid-area: side-right;
+}
+footer {
+    grid-area: footer;
+}
