@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/dormitory.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+
 <body>
     <header>
         <nav class="nav container">
@@ -55,7 +57,7 @@
 
         <div id="selection-washingmachine-time">
             <!-- 시간 선택 -->
-             <div class="flex-container">
+            <div class="flex-container">
                 <div class="selection-washingmachine">
                     <!-- select#washingmachine>option*3{$번 세탁기} -->
                     <select name="washingmachine" id="washingmachine">
@@ -72,17 +74,39 @@
                         <option value="3">9시 20분 ~ 10시 30분</option>
                     </select>
                 </div>
-             </div>
-             <button class="btn">다음</button>
+            </div>
+            <button class="btn">다음</button>
         </div>
 
         <div id="selection-room-name">
             <!-- 호실 이름 -->
+            <div class="flex-container">
+                <div class="selection-room">
+                    <select name="room" id="room">
+                        <!-- option[value=$@401]{$@401호}*18 -->
+                        <option value="401">401호</option>
+                        <option value="402">402호</option>
+                        <option value="403">403호</option>
+                        <option value="404">404호</option>
+                        <option value="405">405호</option>
+                        <option value="501">501호</option>
+                        <option value="502">502호</option>
+                        <option value="503">503호</option>
+                        <option value="504">504호</option>
+                        <option value="505">505호</option>
+                    </select>
+                </div>
+                <div class="input-name">
+                    <input type="text" id="name" name="name" placeholder="이름을 써주세요.">
+                </div>
+            </div>
+            <button class="btn">다음</button>
         </div>
     </main>
-    
+
 
     <script src="js/nav.js"></script>
     <script src="js/dormitory.js"></script>
 </body>
+
 </html>
