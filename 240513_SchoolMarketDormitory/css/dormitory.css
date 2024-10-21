@@ -39,9 +39,6 @@ main {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 25%);
 }
 
-#calendar {
-    display: none;
-}
 #calendar-header {
     display: flex;
     justify-content: center;
@@ -97,6 +94,21 @@ main {
     float: right;
 }
 
-#selection-washingmachine-time {
+#calendar,
+#selection-washingmachine-time,
+#selection-room-name {
     display: none;
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+#board .header {
+    background-color: bisque;
+}
+#board .item {
+    color: black;
+    border: 1px solid gray;
+    height: 30px;
 }
