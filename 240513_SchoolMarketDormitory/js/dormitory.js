@@ -20,9 +20,9 @@ const setPage = (page) => {
     }
     
     //select selection
-    selectionItemDivs[page-1].classList.add("select");
-
-
+    if(selectionItemDivs.length >= page) {      //4페이지 selection은 없음
+        selectionItemDivs[page-1].classList.add("select");
+    } 
 
     //clear pages
     pageDivs.forEach(pageDiv => {
