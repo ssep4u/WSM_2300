@@ -69,7 +69,11 @@ const setPage = (page) => {
     //show page
     pageDivs[page - 1].style.display = "block";       //1페이지: calendar, 2페이지: swt, 3페이지: srn, 4페이지: board
 
-    if (page === 2) {   //세탁기, 시간
+    if (page === 1) {
+        //원래는 백엔드에서 reservations 요청해서 가져오자
+        //지금은 백엔드 안배웠으니까 LocalStorage에서 가져오자
+
+    } else if (page === 2) {   //세탁기, 시간
         initWashingmachineTime();
     } else if (page === 3) {    //호실, 이름
         //세탁기, 시간 번호 기록하자
@@ -212,4 +216,11 @@ const initTable = () => {
             <div class="item board-item">${reservation.notification?"🔔":"🔔⚔"}</div>`;
     });
     boardContainerDiv.innerHTML = tableString;
+}
+const saveReservations = () => {
+    //원래는 백엔드에 reservations 넘겨서 저장하자
+    //백엔드 안배웠으니까 LocalStorage에 저장하자
+    localStorage.setItem("reservations", JSON.stringify(reservations)); //JSON 객체 -> string
+    //저장완료 창 띄우자
+    alert("저장 완료");
 }
