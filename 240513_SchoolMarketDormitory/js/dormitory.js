@@ -72,7 +72,13 @@ const setPage = (page) => {
     if (page === 1) {
         //원래는 백엔드에서 reservations 요청해서 가져오자
         //지금은 백엔드 안배웠으니까 LocalStorage에서 가져오자
-
+        let storedReservations = localStorage.getItem("reservations");
+        if (storedReservations) {   //저장된 reservations가 있으면
+            reservations = JSON.parse(storedReservations);  //string -> JSON 객체
+            reservations.map((reservation) => reservation.date = new Date(reservation.date));  //reservations에서 하나 꺼내서 .date에 있는 string -> Date 객체로 바꾸고 다시 .date에 넣자
+        } else {    //없으면
+            reservations = [];
+        }
     } else if (page === 2) {   //세탁기, 시간
         initWashingmachineTime();
     } else if (page === 3) {    //호실, 이름
